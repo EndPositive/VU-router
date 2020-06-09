@@ -1,0 +1,15 @@
+.actionbar {
+    bottom: 3.8rem;
+    background-color: #007ecc;
+    text-align: center;
+    padding: 1rem 0;
+}
+.discovery-list {
+    margin: 0;
+}
+.discovery-list > li {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+.discovery-list
