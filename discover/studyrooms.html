@@ -10,10 +10,10 @@
     <title>VUrouter - Discover Study Rooms</title>
 </head>
 <body class="d-flex flex-column h-100">
-    <h1 class="text-center py-3 mb-0 bg-dark text-light">Study Rooms</h1>
+    <h1 class="text-center py-3 mb-0 bg-dark text-light"><a href="../index.html" class="btn-back pl-4 pt-4 mt-1"><i class="text-white" data-feather="arrow-left"></i></a>Study Rooms</h1>
 
     <section class="px-3 flex-grow-1">
-        <table class="table mb-0" id="roomlist">
+        <table class="table mb-0 roomlist">
             <tbody>
             <tr attr-type="1" attr-building="HG" attr-wing="B" attr-floor="0" onclick="document.location.href = '../route.html?room=HG00B08'">
                 <td>HG-00B08</td>
@@ -128,8 +128,8 @@
         </table>
     </section>
 
-    <footer class="actionbar">
-        <form action="" class="px-3">
+    <footer class="actionbar px-3">
+        <form action="">
             <div class="form-group">
                 <select name="type" class="form-control">
                     <option value="null" disabled selected>Select room type</option>
