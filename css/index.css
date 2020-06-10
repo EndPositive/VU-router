@@ -40,3 +40,19 @@ section {
     top: 0;
     font-size: 0;
 }
+
+#view-restaurants:target,
+#view-studyrooms:target,
+#view-lecturehalls:target,
+#view-fire:target,
+#view-heatmap:target {
+    background-color: #343a40!important;
+}
+#view-restaurants:target > a,
+#view-studyrooms:target > a,
+#view-lecturehalls:target > a,
+#view-fire:target > a,
+#view-heatmap:target > a {
+    color: white!important;
+}
+
