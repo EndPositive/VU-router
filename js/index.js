@@ -1,18 +1,21 @@
-let lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "type":"solo"},
-                {"building":"HG", "floor":"04", "wing": "B", "room":"05", "type":"group"},
-                {"building":"NU", "floor":"03", "wing": "C", "room":"10", "type":"solo"},
-                {"building":"HG", "floor":"02", "wing": "D", "room":"08", "type":"group"},
-                {"building":"HG", "floor":"01", "wing": "E", "room":"01", "type":"solo"},
-                {"building":"TR", "floor":"00", "wing": "F", "room":"22", "type":"group"},
-                {"building":"WN", "floor":"01", "wing": "KC", "room":"37", "type":"solo"}];
+let lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01"},
+                {"building":"HG", "floor":"04", "wing": "B", "room":"05"},
+                {"building":"NU", "floor":"03", "wing": "C", "room":"10"},
+                {"building":"HG", "floor":"02", "wing": "D", "room":"08"},
+                {"building":"HG", "floor":"01", "wing": "E", "room":"01"},
+                {"building":"TR", "floor":"00", "wing": "F", "room":"22"},
+                {"building":"WN", "floor":"01", "wing": "KC", "room":"37"}];
+
+let studyRooms = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "type":"solo", "availability":"5", "total":"20"},
+                {"building":"WN", "floor":"03", "wing": "F", "room":"56", "type":"group", "availability":"1", "total":"58"},
+                {"building":"NU", "floor":"05", "wing": "G", "room":"32", "type":"solo", "availability":"0", "total":"4"}]
 
 dynamic_table(lectureHalls);
 
-function searchTable(keyword) {
+function searchByKeyword(keyword) {
     var newArray = [];
     lectureHalls.forEach(element => {
         if (toString(element).includes(keyword.value.toUpperCase())) {
-            console.log(toString(element));
             newArray.push(element);
         }
     });
