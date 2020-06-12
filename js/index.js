@@ -8,10 +8,31 @@ let lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "t
 
 dynamic_table(lectureHalls);
 
+function searchTable(keyword) {
+    var newArray = [];
+    lectureHalls.forEach(element => {
+        if (toString(element).includes(keyword.value.toUpperCase())) {
+            console.log(toString(element));
+            newArray.push(element);
+        }
+    });
+    deleteOldTable();
+    dynamic_table(newArray);
+}
+
+function deleteOldTable() {
+    let section = document.getElementById("tableSection");
+    let table = document.getElementById("table");
+    section.removeChild(table);
+}
+
 function dynamic_table(array) {
+    if (array == null)
+        return;
     var tableSection = document.getElementById('tableSection');
     var table = document.createElement('table');
     table.setAttribute("class", "table mb-0 roomlist");
+    table.setAttribute("id", "table");
 
     array.forEach(element => {
         var text = document.createTextNode(toString(element));
@@ -23,7 +44,7 @@ function dynamic_table(array) {
         table.appendChild(tr);
     });
     tableSection.appendChild(table);
-    document.body.insertBefore(tableSection, document.getElementsByClassName("navbar"));
+    document.body.insertBefore(tableSection, document.getElementsByTagName("footer")[0]);
 }
 
 function toString(element) {
