@@ -15,7 +15,7 @@
     <section class="p-0 m-0 flex-grow-1" id="route">
     </section>
 
-    <footer class="actionbar px-3 text-left">
+    <footer class="actionbar px-3 text-left" id="route_selector">
         <div class="d-flex justify-content-between align-items-center">
             <button onclick="prev_route()" class="btn btn-dark btn-lg active" role="button" id="prev_button"><i class="text-white" data-feather="arrow-left"></i></button>
             <h3 class="text-white" id="route_text"></h3>
@@ -25,7 +25,7 @@
             <p class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0" id="ETA"></p>
             <p class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0" id="steps"></p>
             <p class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0" id="heat"></p>
-            <a href="route.html" class="btn btn-success active mt-2 flex-grow-1">Select!</a>
+            <button class="btn btn-success active mt-2 flex-grow-1" onclick="start_route()">Select!</button>
         </div>
     </footer>
 
