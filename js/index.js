@@ -13,7 +13,7 @@ const studyRooms = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "t
                 {"building":"TR", "floor":"04", "wing": "C", "room":"32", "type":"false"    , "availability":"23", "total":"31"},
                 {"building":"WN", "floor":"02", "wing": "A", "room":"32", "type":"true", "availability":"01", "total":"04"}]
 
-function searchByKeyword(keyword) {
+function filterByKeyword(keyword) {
     let newArray = [];
     let pattern = new RegExp(keyword.value.toUpperCase());
     lectureHalls.forEach(element => {
@@ -21,8 +21,7 @@ function searchByKeyword(keyword) {
             newArray.push(element);
         }
     });
-    deleteOldTable();
-    dynamic_table(newArray);
+    refreshTable(newArray);
 }
 
 function filterByCategories(i, array, selected) {
@@ -55,9 +54,7 @@ function selectOption() {
     }
 
     newArray = filterByCategories(selected.length - 1, studyRooms, selected);
-
-    deleteOldTable();
-    dynamic_table(newArray);
+    refreshTable(newArray);
 }
 
 function setStudyRoomAttributes(tr, element) {
@@ -73,13 +70,9 @@ function deleteOldTable() {
     if (table != null)
         section.removeChild(table);
 }
-
-function toString(element) {
-    return element.building + "-" + element.floor + element.wing + element.room;
-}
               
-function dynamic_table(array) {
-    if (array == null)
+function createNewTable(array) {
+    if (!(array instanceof Array) || array == null)
         return;
     var tableSection = document.getElementById('tableSection');
     var table = document.createElement('table');
@@ -107,4 +100,13 @@ function dynamic_table(array) {
     });
     tableSection.appendChild(table);
     document.body.insertBefore(tableSection, document.getElementsByTagName("footer")[0]);
+}
+
+function refreshTable(array) {
+    deleteOldTable();
+    createNewTable(array);
+}
+
+function toString(element) {
+    return element.building + "-" + element.floor + element.wing + element.room;
 }

@@ -20,7 +20,7 @@
         </div>
         <form action="" class="pl-3 flex-grow-1">
             <div class="form-group mb-0">
-                <input type="text" class="form-control" placeholder="Search..." onkeyup="searchByKeyword(this)">
+                <input type="text" class="form-control" placeholder="Search..." onkeyup="filterByKeyword(this)">
             </div>
         </form>
     </footer>
@@ -43,7 +43,7 @@
     <script src="../js/index.js"></script>
     <script>
         feather.replace()
-        dynamic_table(lectureHalls);
+        createNewTable(lectureHalls);
     </script>
 </body>
 </html>
