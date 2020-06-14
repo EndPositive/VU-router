@@ -30,21 +30,19 @@ function filterByCategories(i, array, selected) {
     if (i >= 0 && selected[i].value == "null") {
         return filterByCategories(--i, array, selected);
     }
-    else if (i == 0) {
-        newArray = array.filter(element => element.type == selected[i].value);
-        return filterByCategories(--i, newArray, selected);
-    }
-    else if (i == 1) {
-        newArray = array.filter(element => element.building == selected[i].value);
-        return filterByCategories(--i, newArray, selected);
-    }
-    else if (i == 2) {
-        newArray = array.filter(element => element.wing == selected[i].value);
-        return filterByCategories(--i, newArray, selected);
-    }
-    else if (i == 3) {
-        newArray = array.filter(element => element.floor == selected[i].value);
-        return filterByCategories(--i, newArray, selected);
+    else switch (i) {
+        case 0:
+            newArray = array.filter(element => element.type == selected[i].value);
+            return filterByCategories(--i, newArray, selected);
+        case 1:
+            newArray = array.filter(element => element.building == selected[i].value);
+            return filterByCategories(--i, newArray, selected);
+        case 2:
+            newArray = array.filter(element => element.wing == selected[i].value);
+            return filterByCategories(--i, newArray, selected);
+        case 3:
+            newArray = array.filter(element => element.floor == selected[i].value);
+            return filterByCategories(--i, newArray, selected);
     }
     return newArray;
 }
