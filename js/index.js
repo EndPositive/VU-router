@@ -57,11 +57,12 @@ function selectOption() {
     refreshTable(newArray);
 }
 
-function setStudyRoomAttributes(tr, element) {
+function setStudyRoomAttributes(tr, element, type) {
     tr.setAttribute("attr-type", element.type);
     tr.setAttribute("attr-building", element.building);
     tr.setAttribute("attr-wing", element.wing);
     tr.setAttribute("attr-floor", element.floor);
+    tr.setAttribute("onclick", "room_info('" + toString(element) + "', '" + type + "')");
 }
 
 function deleteOldTable() {
@@ -88,12 +89,14 @@ function createNewTable(array) {
         tr.appendChild(td);
 
         if (array == studyRooms) {
-            setStudyRoomAttributes(tr, element);
+            setStudyRoomAttributes(tr, element, "studyroom");
             var td = document.createElement('td');
             var text = document.createTextNode("(" + element.availability + "/" + element.total + ")");
             td.setAttribute("class","text-right");
             td.appendChild(text);
             tr.appendChild(td);
+        } else {
+            setStudyRoomAttributes(tr, element, "lecturehall");
         }
 
         table.appendChild(tr);
@@ -109,4 +112,8 @@ function refreshTable(array) {
 
 function toString(element) {
     return element.building + "-" + element.floor + element.wing + element.room;
+}
+
+function room_info(room, type) {
+    window.location.href = "../routes/context.html?type=" + type + "&room=" + room;
 }
