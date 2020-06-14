@@ -22,7 +22,7 @@ function populate_routes() {
     heat.textContent = (current_route * 22 + 21) + " nearby";
 
     let route = document.getElementById("route");
-    route.innerHTML = '<img src="' +  path_to_route_image + '" >';
+    route.innerHTML = '<img src="' +  path_to_route_image + '" style="width: 100%; ">';
 
 }
 
@@ -50,10 +50,10 @@ function random_path() {
             path_to_route_image += "route2.png"
             break;
         case 2:
-            path_to_route_image += "route2.png"
+            path_to_route_image += "route3.png"
             break;
         default:
-            path_to_route_image += "route2.png"
+            path_to_route_image += "route4.png"
             break;
     }
     console.log(path)
