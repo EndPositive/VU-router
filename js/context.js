@@ -30,7 +30,7 @@ function populate_context() {
 }
 
 function start_route() {
-    document.location.href = "nav.html"
+    document.location.href = "../routes/choose.html"
 }
 
 function book_room(btn) {

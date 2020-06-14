@@ -6,7 +6,7 @@ let route1 = {
     heat: 34,
     steps: 1,
     name: "route 1",
-    path_to_route_image1: "../routes/route1.png",
+    path_to_route_image1: "../img/route1.png",
     path_to_route_image2: null
 };
 let route2 = {
@@ -14,7 +14,7 @@ let route2 = {
     heat: 12,
     steps: 1,
     name: "route 2",
-    path_to_route_image1: "../routes/route2.png",
+    path_to_route_image1: "../img/route2.png",
     path_to_route_image2: null
 };
 let route3 = {
@@ -22,8 +22,8 @@ let route3 = {
     heat: 13,
     steps: 2,
     name: "route 3",
-    path_to_route_image1: "../routes/Down1from(128).png",
-    path_to_route_image2: "../routes/StairsToB52.png"
+    path_to_route_image1: "../img/Down1from(128).png",
+    path_to_route_image2: "../img/StairsToB52.png"
 };
 
 function newFooterWhenRouteStarts (ETAleft, stepsleft, heatleft) {
@@ -78,15 +78,13 @@ function prev_route() {
 }
 
 function get_route() {
-    // const path = Math.floor(Math.random() * 100) % 3
-    // var path_to_route_image = null;
     switch (current_route) {
         case 0:
-            return route;
+            return route1;
         case 1:
-            return route;
+            return route2;
         case 2:
-            return route;
+            return route3;
     }
     return null;
 }
