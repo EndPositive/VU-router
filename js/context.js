@@ -34,9 +34,9 @@ function start_route() {
 }
 
 function book_room(btn) {
-    var today = new Date();
-    var starttime = today.getHours() + ":" + today.getMinutes();
-    var endtime = (today.getHours() + 1) + ":" + today.getMinutes();
+    const today = new Date();
+    const starttime = today.getHours() + ":" + today.getMinutes();
+    const endtime = (today.getHours() + 1) + ":" + today.getMinutes();
 
     btn.innerText = "Room booked for " + starttime + " - " + endtime;
     btn.classList.add("btn-outline-dark");

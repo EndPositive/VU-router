@@ -73,25 +73,25 @@ function deleteOldTable() {
 }
               
 function createNewTable(array) {
-    if (!(array instanceof Array) || array == null)
+    if (!(array instanceof Array))
         return;
-    var tableSection = document.getElementById('tableSection');
-    var table = document.createElement('table');
+    let tableSection = document.getElementById('tableSection');
+    let table = document.createElement('table');
     table.setAttribute("class", "table mb-0 roomlist");
     table.setAttribute("id", "table");
 
     array.forEach(element => {
-        var text = document.createTextNode(toString(element));
-        var tr = document.createElement('tr');
-        var td = document.createElement('td');
+        let text = document.createTextNode(toString(element));
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
 
         td.appendChild(text);
         tr.appendChild(td);
 
         if (array == studyRooms) {
             setStudyRoomAttributes(tr, element, "studyroom");
-            var td = document.createElement('td');
-            var text = document.createTextNode("(" + element.availability + "/" + element.total + ")");
+            td = document.createElement('td');
+            text = document.createTextNode("(" + element.availability + "/" + element.total + ")");
             td.setAttribute("class","text-right");
             td.appendChild(text);
             tr.appendChild(td);
