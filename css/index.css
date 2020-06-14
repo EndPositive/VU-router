@@ -59,3 +59,8 @@ section {
     color: white!important;
 }
 
+#book.btn-outline-dark:hover {
+    color: initial;
+    background-color: initial;
+    border-color: initial;
+}
