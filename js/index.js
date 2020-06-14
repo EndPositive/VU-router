@@ -1,4 +1,4 @@
-let lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01"},
+const lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01"},
                 {"building":"HG", "floor":"04", "wing": "B", "room":"05"},
                 {"building":"NU", "floor":"03", "wing": "C", "room":"10"},
                 {"building":"HG", "floor":"02", "wing": "D", "room":"08"},
@@ -6,14 +6,18 @@ let lectureHalls = [{"building":"HG", "floor":"05", "wing": "A", "room":"01"},
                 {"building":"TR", "floor":"00", "wing": "F", "room":"22"},
                 {"building":"WN", "floor":"01", "wing": "KC", "room":"37"}];
 
-let studyRooms = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "type":"1", "availability":"05", "total":"20"},
-                {"building":"WN", "floor":"03", "wing": "F", "room":"56", "type":"2", "availability":"01", "total":"58"},
-                {"building":"NU", "floor":"05", "wing": "G", "room":"32", "type":"1", "availability":"00", "total":"04"}]
+const studyRooms = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "type":"true", "availability":"05", "total":"20"},
+                {"building":"WN", "floor":"03", "wing": "F", "room":"56", "type":"false", "availability":"01", "total":"58"},
+                {"building":"NU", "floor":"01", "wing": "F", "room":"32", "type":"true", "availability":"00", "total":"04"},
+                {"building":"HG", "floor":"01", "wing": "B", "room":"32", "type":"true", "availability":"21", "total":"45"},
+                {"building":"TR", "floor":"04", "wing": "C", "room":"32", "type":"false"    , "availability":"23", "total":"31"},
+                {"building":"WN", "floor":"02", "wing": "A", "room":"32", "type":"true", "availability":"01", "total":"04"}]
 
 function searchByKeyword(keyword) {
-    var newArray = [];
+    let newArray = [];
+    let pattern = new RegExp(keyword.value.toUpperCase());
     lectureHalls.forEach(element => {
-        if (toString(element).includes(keyword.value.toUpperCase())) {
+        if (pattern.test(toString(element))) {
             newArray.push(element);
         }
     });
@@ -21,23 +25,39 @@ function searchByKeyword(keyword) {
     dynamic_table(newArray);
 }
 
-// Make it an exclusive search, right now it selects if it contains the option, regardless of other selected options
-function selectOption(option) {
-    var newArray = [];
-    var options = document.getElementsByTagName("option");
-    for (let item of options) {
-        if (item.selected) {
-            studyRooms.forEach(element => {
-                switch (item.value) {
-                    case element.building: newArray.push(element); break;
-                    case element.floor: newArray.push(element);break;
-                    case element.wing: newArray.push(element);break;
-                    case element.room: newArray.push(element);break;
-                    case element.type: newArray.push(element);break;
-                }
-            });
-        }
+function filterByCategories(i, array, selected) {
+    let newArray = array;
+    if (i >= 0 && selected[i].value == "null") {
+        return filterByCategories(--i, array, selected);
     }
+    else if (i == 0) {
+        newArray = array.filter(element => element.type == selected[i].value);
+        return filterByCategories(--i, newArray, selected);
+    }
+    else if (i == 1) {
+        newArray = array.filter(element => element.building == selected[i].value);
+        return filterByCategories(--i, newArray, selected);
+    }
+    else if (i == 2) {
+        newArray = array.filter(element => element.wing == selected[i].value);
+        return filterByCategories(--i, newArray, selected);
+    }
+    else if (i == 3) {
+        newArray = array.filter(element => element.floor == selected[i].value);
+        return filterByCategories(--i, newArray, selected);
+    }
+    return newArray;
+}
+
+function selectOption() {
+    let newArray, selected = [];
+    for (let item of document.getElementsByTagName("option")) {
+        if (item.selected)
+            selected.push(item);
+    }
+
+    newArray = filterByCategories(selected.length - 1, studyRooms, selected);
+
     deleteOldTable();
     dynamic_table(newArray);
 }

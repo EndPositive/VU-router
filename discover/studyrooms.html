@@ -17,14 +17,14 @@
     <footer class="actionbar px-3">
         <form action="">
             <div class="form-group">
-                <select name="type" class="form-control" onclick="selectOption(this)">+
+                <select name="type" class="form-control" onclick="selectOption()">+
                     <option value="null" disabled selected>Select room type</option>
-                    <option value="1">Group work</option>
-                    <option value="2">Lone wolf</option>
+                    <option value="true">Group work</option>
+                    <option value="false">Lone wolf</option>
                 </select>
             </div>
             <div class="form-group">
-                <select name="type" class="form-control" onclick="selectOption(this)">
+                <select name="building" class="form-control" onclick="selectOption()">
                     <option value="null" disabled selected>Select building</option>
                     <option value="HG">HG</option>
                     <option value="WN">WN</option>
@@ -33,7 +33,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <select name="type" class="form-control" onclick="selectOption(this)">
+                <select name="wing" class="form-control" onclick="selectOption()">
                     <option value="null" disabled selected>Select wing</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -44,14 +44,14 @@
                 </select>
             </div>
             <div class="form-group mb-0">
-                <select name="type" class="form-control" onclick="selectOption(this)">
+                <select name="floor" class="form-control" onclick="selectOption()">
                     <option value="null" disabled selected>Select floor</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                    <option value="04">4</option>
+                    <option value="05">5</option>
+                    <option value="06">6</option>
                 </select>
             </div>
         </form>
