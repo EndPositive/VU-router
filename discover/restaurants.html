@@ -12,7 +12,7 @@
 <body class="d-flex flex-column h-100">
     <h1 class="text-center py-3 mb-0 bg-dark text-light"><a href="../index.html" class="btn-back pl-4 pt-4 mt-1"><i class="text-white" data-feather="arrow-left"></i></a>Restaurants</h1>
 
-    <section class="px-3 flex-grow-1">
+    <section class="px-3 flex-grow-1" id="listSection">
         <article class="pt-3 border-bottom">
             <h4>Restaurant 1</h4>
             <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-danger">very crowded</span>
@@ -22,36 +22,6 @@
             <h4>Restaurant 2</h4>
             <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-success">quiet</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 3</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-danger">very crowded</span>
-            <p>Porttitor lacus luctus accumsan tortor posuere ac ut consequat.</p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 4</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-danger">very crowded</span>
-            <p>In ornare quam viverra orci. Faucibus in ornare quam viverra. Id faucibus nisl tincidunt eget nullam non. </p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 5</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-primary">mildly crowded</span>
-            <p>Vivamus arcu felis bibendum ut tristique et egestas quis. </p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 6</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-success">quiet</span>
-            <p>Faucibus vitae aliquet nec ullamcorper sit amet risus. Laoreet sit amet cursus sit amet dictum sit. </p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 7</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-danger">very crowded</span>
-            <p>Dui nunc mattis enim ut tellus elementum sagittis.</p>
-        </article>
-        <article class="pt-3 border-bottom">
-            <h4>Restaurant 8</h4>
-            <span class="mr-3">09.00 - 16.30</span><span class="font-weight-bold text-success">quiet</span>
-            <p>Convallis a cras semper auctor neque vitae tempus quam.</p>
         </article>
     </section>
 
@@ -81,9 +51,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/restaurant.js"></script>
     <script>
         feather.replace()
+        fillRestaurants(restaurants);
     </script>
 </body>
 </html>

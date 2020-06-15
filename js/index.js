@@ -71,7 +71,7 @@ function deleteOldTable() {
     if (table != null)
         section.removeChild(table);
 }
-              
+
 function createNewTable(array) {
     if (!(array instanceof Array))
         return;
