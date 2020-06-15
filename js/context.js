@@ -20,6 +20,10 @@ function populate_context() {
             usage.innerText = lower + "/" + higher + " available";
             book.style.removeProperty("display");
             break;
+        case "restaurant":
+            usage.innerText = "max. " + Math.ceil(Math.random() * 250);
+            book.style.display = "none";
+            break;
     }
 
     let current_class = document.getElementById("current_class");
