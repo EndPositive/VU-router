@@ -117,3 +117,8 @@ function toString(element) {
 function room_info(room, type) {
     window.location.href = "../routes/context.html?type=" + type + "&room=" + room;
 }
+
+function emergency() {
+    alert("AN EMERGENCY SIGNAL HAS BEEN SENT OUT. Please press to `OK` to select an evacuation route.");
+    window.location.href="routes/nav.html";
+}

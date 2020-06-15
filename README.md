@@ -81,4 +81,4 @@ For this, we are using Azure services to create an interactable interface for a 
 ## Other features
 
 ### The emergency
-triggered by pressing `CTRL + I` on the home screen. 
+Triggered by pressing `return` on the home screen. This is an experimental feature and is only there to trigger the emergency. In the real system, we would have the service go into 'emergency mode' from any state in the system.
