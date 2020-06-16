@@ -15,7 +15,7 @@ const studyRooms = [{"building":"HG", "floor":"05", "wing": "A", "room":"01", "t
 
 function filterByKeyword(keyword) {
     let newArray = [];
-    let pattern = new RegExp(keyword.value.toUpperCase());
+    let pattern = new RegExp(keyword.value.toUpperCase().replace(/\s/g,''));
     lectureHalls.forEach(element => {
         if (pattern.test(toString(element))) {
             newArray.push(element);
