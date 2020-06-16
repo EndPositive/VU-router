@@ -138,7 +138,7 @@ function newFooterWhenRouteStarts (route) {
         </div>
         <div class="d-flex justify-content-between flex-wrap">
             <p class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0" id="ETA">ETA: ` + route.steps[0].eta + `min</p>
-            <a href="choose.html" class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0"><i class="text-dark" data-feather="x"></i></a>
+            <a href="nav.html" class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0"><i class="text-dark" data-feather="x"></i></a>
         </div>
     `
 }
