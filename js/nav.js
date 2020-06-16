@@ -4,13 +4,26 @@ let current_step = 0;
 let routes = [
     {
         heat: 34,
-        name: "route 1",
         steps: [
             {
                 eta: 5,
-                text: "Turn left",
+                text: "Route 1",
                 image: [
-                    "../img/route1.png"
+                    "../img/route_1_0.png"
+                ]
+            },
+            {
+                eta: 5,
+                text: "Turn right",
+                image: [
+                    "../img/route_1_1.png"
+                ]
+            },
+            {
+                eta: 5,
+                text: "Go straight",
+                image: [
+                    "../img/route_1_2.png"
                 ]
             },
         ]
@@ -21,32 +34,26 @@ let routes = [
         steps: [
             {
                 eta: 7,
-                text: "Turn left1",
+                text: "Route 2",
                 image: [
-                    "../img/route2.png"
+                    "../img/route_2_0.png"
+                ]
+            },
+            {
+                eta: 7,
+                text: "Route 2",
+                image: [
+                    "../img/route_2_1.png"
+                ]
+            },
+            {
+                eta: 7,
+                text: "Route 2",
+                image: [
+                    "../img/route_2_2.png"
                 ]
             },
         ]
-    },
-    {
-        heat: 13,
-        name: "route 3",
-        steps: [
-            {
-                eta: 2,
-                text: "Turn left1",
-                image: [
-                    "../img/Down1from(128).png",
-                ]
-            },
-            {
-                eta: 1,
-                text: "Turn left2",
-                image: [
-                    "../img/StairsToB52.png"
-                ]
-            },
-        ],
     }
 ]
 
