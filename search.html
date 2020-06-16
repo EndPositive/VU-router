@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>VUrouter - Route</title>
+</head>
+<body class="d-flex flex-column h-100">
+    <h1 class="text-center py-3 mb-0 bg-dark text-light"><a href="#" onclick="hideSearch()" class="btn-back pl-4 pt-4 mt-1" id="search-back" style="display: none;"><i class="text-white" data-feather="arrow-left"></i></a>Route</h1>
+
+    <section class="px-4 flex-grow-1" id="common" style="height: 0;">
+        <h3 class="pt-4 pl-0">Choose a common route<br/>or start typing</h3>
+        <table class="table mb-0 roomlist">
+            <tbody>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            <tr onclick="document.location.href = 'routes/nav.html'">
+                <td>HG-KC07</td>
+                <td><i class="text-dark" data-feather="arrow-right"></i></td>
+                <td class="text-right">HG-00B08</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="px-4" id="search">
+        <h3 class="pt-4 pl-0" id="search-title"></h3>
+        <table class="table mb-0 roomlist">
+            <thead>
+                <tr>
+                    <th>Room</th>
+                    <th>Type</th>
+                    <th class="text-right">ETA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr onclick="select('HG-05A01')">
+                    <td>HG-05A01</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">5min</td>
+                </tr>
+                <tr onclick="select('WN-03F56')">
+                    <td>WN-03F56</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">6min</td>
+                </tr>
+                <tr onclick="select('NU-01F32')">
+                    <td>NU-01F32</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('HG-01B32')">
+                    <td>HG-01B32</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">7min</td>
+                </tr>
+                <tr onclick="select('TR-04C32')">
+                    <td>TR-04C32</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">12min</td>
+                </tr>
+                <tr onclick="select('WN-02A32')">
+                    <td>WN-02A32</td>
+                    <td>Studyroom</td>
+                    <td class="text-right">9min</td>
+                </tr>
+                <tr onclick="select('HG-05A01')">
+                    <td>HG-05A01</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('HG-04B05')">
+                    <td>HG-04B05</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">5min</td>
+                </tr>
+                <tr onclick="select('NU-03C10')">
+                    <td>NU-03C10</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">6min</td>
+                </tr>
+                <tr onclick="select('HG-02D08')">
+                    <td>HG-02D08</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">9min</td>
+                </tr>
+                <tr onclick="select('HG-01E01')">
+                    <td>HG-01E01</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">6min</td>
+                </tr>
+                <tr onclick="select('TR-00F22')">
+                    <td>TR-00F22</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">12min</td>
+                </tr>
+                <tr onclick="select('WN-01KC37')">
+                    <td>WN-01KC37</td>
+                    <td>Lecturehall</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('Restaurant 1')">
+                    <td>Restaurant 1</td>
+                    <td>Restaurant</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('Restaurant 2')">
+                    <td>Restaurant 2</td>
+                    <td>Restaurant</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('Restaurant 3')">
+                    <td>Restaurant 3</td>
+                    <td>Restaurant</td>
+                    <td class="text-right">3min</td>
+                </tr>
+                <tr onclick="select('Restaurant 4')">
+                    <td>Restaurant 4</td>
+                    <td>Restaurant</td>
+                    <td class="text-right">3min</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="actionbar d-flex px-3">
+        <form action="" class="flex-grow-1">
+            <div class="form-group">
+                <input type="text" name="src" class="form-control" onkeyup="searchAll(this)" onclick="showSearch(this)" placeholder="Your Location" autofocus>
+            </div>
+            <div class="form-group mb-1">
+                <input type="text" name="dest" class="form-control" onkeyup="searchAll(this)" onclick="showSearch(this)" placeholder="Destination...">
+            </div>
+        </form>
+        <a href="routes/nav.html" class="btn btn-success ml-3" id="req-route-btn">Route me now!</a>
+    </footer>
+
+    <nav class="navbar navbar-dark bg-dark py-0">
+        <div class="col d-flex justify-content-center bg-light">
+            <a href="search.html" class="p-3"><i class="text-dark" data-feather="search"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <a href="index.html" class="p-3"><i class="text-white" data-feather="compass"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <a href="map.html" class="p-3"><i class="text-white" data-feather="map"></i></a>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

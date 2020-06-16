@@ -50,3 +50,13 @@ section {
     background-color: initial;
     border-color: initial;
 }
+#common,
+#search {
+    transition: .6s ease-in;
+}
+#common {
+    height: 100%;
+}
+#search {
+    height: 0;
+}
