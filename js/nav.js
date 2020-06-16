@@ -93,8 +93,8 @@ function populate_routes() {
 }
 
 function populate_end() {
-    let route = document.getElementById("route");
-    route.innerHTML = "PLACEHOLDER FOR MAP WITH ONLY PLACE ICON"
+    let route = document.getElementById("map");
+    route.src = "../img/route_end.png";
 
     let route_select = document.getElementById("route_selector");
     route_select.innerHTML = newFooterWhenRouteEnds();
