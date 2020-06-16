@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://unpkg.com/feather-icons"></script>
-    <script type="text/javascript" src="http://manuelstofer.github.io/pinchzoom/dist/pinch-zoom.umd.js"></script>
     <link rel="stylesheet" href="../css/index.css">
 
     <title>VUrouter - Room info</title>
@@ -14,7 +13,7 @@
     <h1 class="text-center py-3 mb-0 bg-dark text-light"><a href="../index.html" class="btn-back pl-4 pt-4 mt-1"><i class="text-white" data-feather="arrow-left"></i></a>Room info</h1>
 
     <section class="p-0 m-0 flex-grow-1" id="map">
-        <img  src="../img/route_end.png">
+        <img  src="../img/route_end.png" style="width: 100%;">
     </section>
 
     <footer class="actionbar px-3 text-left">
@@ -47,8 +46,6 @@
     <script src="../js/context.js"></script>
     <script>
         feather.replace();
-        let el = document.querySelector('#map');
-        new PinchZoom.default(el, {});
         populate_context();
     </script>
 </body>
