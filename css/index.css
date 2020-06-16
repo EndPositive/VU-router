@@ -43,6 +43,7 @@ section {
 }
 #req-route-btn {
     line-height: 4.5;
+    white-space: nowrap;
 }
 
 #book.btn-outline-dark:hover {
