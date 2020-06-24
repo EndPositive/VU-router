@@ -147,7 +147,7 @@ function newFooterWhenRouteEnds () {
     return `
         <div class="d-flex justify-content-between align-items-center">
             <h3 class="text-white p-0 m-0" id="route_text">Destination reached!</h3>
-            <a href="../index.html" class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0"><i class="text-dark" data-feather="x"></i></a>
+            <a href="../" class="box-icon-white w-auto px-2 mr-2 mt-2 mb-0"><i class="text-dark" data-feather="x"></i></a>
         </div>
     `
 }
